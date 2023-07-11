@@ -1,0 +1,7 @@
+Steps to Install Etcher On ubuntu 
+
+1. download Ether from it's official website https://etcher.balena.io/#download-etcher
+2. sudo apt install libfuse2                                                                         # Supporting files required 
+3. Extract downloaded files to the directory
+4. Change the File permission to executable clicking right button + properties + permissions + allow executing files as a programs 
+5. Right click and Run the program file.
