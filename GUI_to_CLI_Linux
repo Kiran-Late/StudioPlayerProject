@@ -1,0 +1,2 @@
+systemctl set-default graphical.target           # From console mode to graphical mode 
+systemctl set-default multi-user.target          # From graphical mode to console mode
