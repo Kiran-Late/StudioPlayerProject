@@ -1,0 +1,15 @@
+How can I verify whether hardware acceleration is available and whether it is enabled for my video card.
+
+If you don't already have it, install glxinfo; in APT it's part of mesa-utils:
+
+apt-get install mesa-utils
+
+Run glxinfo and look for a line about direct rendering (another term for hardware acceleration):
+
+> glxinfo | grep "direct rendering"
+direct rendering: Yes
+
+If it says "Yes", hardware acceleration is enabled
+
+
+from: https://unix.stackexchange.com/questions/963/how-to-verify-if-hardware-acceleration-is-enabled
