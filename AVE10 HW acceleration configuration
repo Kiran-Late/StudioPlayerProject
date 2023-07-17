@@ -1,0 +1,46 @@
+There are a few ways to configure AVE10 as per your requirement on Ubuntu or Armbian OS.
+
+Using the armbian-config tool
+
+The armbian-config tool is a graphical user interface that can be used to configure various aspects of your Armbian system, including AVE10. To configure AVE10 using armbian-config, follow these steps:
+
+    Boot your Armbian system.
+    Log in as root.
+    Run the following command:
+
+sudo armbian-config
+
+    Select the "Hardware" tab.
+    Select the "AVE10" option.
+    Configure the settings as desired.
+    Save your changes and exit armbian-config.
+
+Using the command line
+
+You can also configure AVE10 using the command line. To do this, you will need to know the following commands:
+
+    amlogic-config - This command is used to configure the Amlogic Video Engine.
+    amlogic-set-profile - This command is used to set the profile for the Amlogic Video Engine.
+
+To configure AVE10 using the command line, follow these steps:
+
+    Boot your Armbian system.
+    Log in as root.
+    Run the following command to configure the Amlogic Video Engine:
+
+amlogic-config
+
+    Select the "AVE10" option.
+    Configure the settings as desired.
+    Save your changes and exit amlogic-config.
+    Run the following command to set the profile for the Amlogic Video Engine:
+
+amlogic-set-profile <profile>
+
+where <profile> is the name of the profile you want to set.
+
+Using a video player
+
+Some video players, such as Kodi, allow you to configure AVE10 settings. To do this, open the video player and select the "Settings" menu. Then, select the "Video" or "Playback" section and look for the AVE10 settings. You can then configure the settings as desired.
+
+Once you have configured AVE10, you should see a noticeable improvement in the performance of your Libre computer board when playing videos or other multimedia content.
