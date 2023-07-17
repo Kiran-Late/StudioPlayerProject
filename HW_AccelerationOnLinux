@@ -1,3 +1,5 @@
+from: https://unix.stackexchange.com/questions/963/how-to-verify-if-hardware-acceleration-is-enabled
+
 How can I verify whether hardware acceleration is available and whether it is enabled for my video card.
 
 If you don't already have it, install glxinfo; in APT it's part of mesa-utils:
@@ -11,5 +13,37 @@ direct rendering: Yes
 
 If it says "Yes", hardware acceleration is enabled
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+from bard:
 
-from: https://unix.stackexchange.com/questions/963/how-to-verify-if-hardware-acceleration-is-enabled
+Amlogic Video Engine (AVE10) is a dedicated hardware video decoder and encoder that is found on many Libre computer boards. It is capable of decoding a wide range of video formats, including VP9, H.265, H.264, MPEG-4, and VC-1. It can also encode video in JPEG or H.265.
+
+AVE10 offloads the CPU from the processing of video decoding, which allows the CPU to be used for other tasks, such as running the operating system or playing games. This can improve the performance of the Libre computer board when playing videos or other multimedia content.
+
+In addition, AVE10 supports multiple "secured" video decoding sessions. This means that it can be used to decode video that is encrypted with DRM (digital rights management) technology. This is important for playing back videos that have been purchased from online stores or that have been protected by copyright.
+
+Overall, Amlogic Video Engine (AVE10) is a powerful video decoding and encoding engine that can significantly improve the performance and capabilities of Libre computer boards.
+
+Here are some specific examples of what AVE10 can do:
+
+    Decode 4K Ultra HD video at 60fps
+    Decode HDR (high dynamic range) video
+    Encode video in H.265 with low latency
+    Support multiple "secured" video decoding sessions
+
+If you are looking for a Libre computer board that can handle high-quality video playback, then AVE10 is a good option to consider.
+
+AVE10 is used as a hardware acceleration on Libre computer boards. It offloads the CPU from the processing of video decoding, which allows the CPU to be used for other tasks, such as running the operating system or playing games. This can improve the performance of the Libre computer board when playing videos or other multimedia content.
+
+Hardware acceleration is the use of specialized hardware to perform certain tasks more efficiently than software. In the case of AVE10, it is specialized hardware that is used to decode video. This hardware is able to decode video much faster than the CPU, which can free up the CPU to do other things.
+
+As a result, using AVE10 as a hardware acceleration on Libre computer boards can improve the performance of the board when playing videos or other multimedia content. This is because the CPU is not bogged down by the task of decoding video, and it can instead focus on other tasks.
+
+Here are some of the benefits of using AVE10 as a hardware acceleration on Libre computer boards:
+
+    Improved performance when playing videos or other multimedia content
+    Frees up the CPU to do other tasks
+    Can support higher resolutions and frame rates
+    Can reduce power consumption
+
+If you are looking for a Libre computer board that can handle high-quality video playback, then using AVE10 as a hardware acceleration is a good option to consider.
