@@ -1,0 +1,38 @@
+There are 3 ways to flash the eMMC. This method does not require a MicroSD card. For the other two methods, please see eMMC Flashing via MicroSD Card 990.
+
+Requirements
+
+    Le Potato board
+    eMMC 5.x module attached
+    USB Type A to USB Type A cable
+    Any Linux computer (not AMD) or SBC (Windows/Mac OS might work, untested)
+
+Install the necessary tools and clone pyamlboot:
+
+sudo apt install -y python3-usb
+git clone --single-branch https://github.com/libre-computer-project/pyamlboot.git -b scripts
+
+    Detach all peripherals including HDMI cable, USB devices, and MicroUSB power.
+    Plug one end of the USB Type A cable into your computer/SBC with pyamlboot.
+    Press and hold the K11/Uboot button on the board while attaching the other end of the USB Type A cable into the top left USB port next to the Ethernet. Release button.
+    Attach auxiliary power via MicroUSB if your computer/SBC does not provide enough. (Optional)
+
+    follow the link fro details:  https://hub.libre.computer/t/libre-computer-aml-s905x-cc-emmc-flashing-steps-from-linux/33
+Below are two actions. Only run one of the following actions per connect. If you need to run a different action, power off the board completely (usually HDMI, MicroUSB, and USB Type A) and repeat from step 3.
+
+To erase eMMC user partition table and bootloader, run the following:
+
+sudo pyamlboot/run.sh aml-s905x-cc erase-emmc
+# erases first 1MB of eMMC user hardware partition
+# this includes any MBR/GPT partition table and bootloader
+
+To turn eMMC into a virtual flash drive to flash images, run the following:
+
+sudo pyamlboot/run.sh aml-s905x-cc ums-emmc
+# exposes eMMC user hardware partition as a flash drive after 5 seconds
+# you do not have to erase the eMMC first before flashing images
+
+Wait 10 seconds and a virtual flash drive should appear to your Linux machine/SBC. You can use gnome-disk-imager or dd to flash any of our images directly to the eMMC. This method of dumping to eMMC is limited by the Porgrammable IO USB transfer mode which has a peak write speed of around 10MB/s.
+
+There is a known issue with AMD machines timing out on USB transfers. We have yet to figure out a workaround so please use Intel machines or an SBC to do this. If anyone at AMD is reading this, please fix your USB please :smiley:
+    
